@@ -21,14 +21,14 @@ public:
 	double getAMU() const;
 
 public:
-	vector<pair<Element, int> > cmpd;
+	vector<pair<Element, double> > cmpd;
 	string formula;
 
 private:
-	int extractNumber(const string& rawTerm, int& cursor);
-	vector<pair<Element, int> > extractCompound(map<string, Element>& periodicTable, const string& rawTerm, int& cursor);
+	double extractNumber(const string& rawTerm, int& cursor);
+	vector<pair<Element, double> > extractCompound(map<string, Element>& periodicTable, const string& rawTerm, int& cursor);
 	string extractElementSym(const string& rawTerm, int& cursor);
-	int extractSubscript(const string& rawTerm, int& cursor);
+	double extractSubscript(const string& rawTerm, int& cursor);
 
 };
 
